@@ -1,4 +1,4 @@
-// fs モジュールを読み込み
+// fs モジュール読み込み
 const fs = require('fs')
 
 // data/items.jsonのパス設定
