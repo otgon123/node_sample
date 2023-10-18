@@ -7,5 +7,18 @@
 </head>
 <body>
     <h1><%= title %></h1>
+    <table>
+        <tr>
+            <th>商品名</th>
+            <th>価格</th>
+        </tr>
+        <!-- items 繰り返し表示 -->
+        <% items.forEach((item) => { %>
+        <tr>
+            <td><%= item.name %></td>
+            <td>\<%= item.price %></td>
+        </tr>
+        <% }) %> 
+    </table>
 </body>
 </html>
