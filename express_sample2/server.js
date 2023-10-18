@@ -3,7 +3,7 @@ const express = require('express')
 // dotenvモジュール読み込み
 const dotenv = require('dotenv')
 // routerモジュール読み込み
-const routes = require('./routes')
+const routes = require('./router')
 
 // dotenvの設定読み込み
 dotenv.config()
