@@ -6,6 +6,7 @@ const router = express.Router()
 const item = require('./models/item')
 
 // GETリクエストの処理
+// トップページ
 router.get('/', (req, res) => {
     // リクエストの処理
     console.log(req.body)
@@ -14,6 +15,7 @@ router.get('/', (req, res) => {
     // レスポンスの処理
     // res.send('Hello!!!!!!')
     //テンプレート表示（レンダリング）
+    // views/index.ejs を表示
     res.render('index')
 })
 
@@ -57,6 +59,8 @@ router.get('/item/:id', (req, res) => {
     }
     // views/item/detail.ejs にデータを渡して表示
     res.render('item/detail', data)
+
+    // res.render('item/detail', { title: "商品詳細", item: selectItem } )
 })
 
 // POSTリクエスト
