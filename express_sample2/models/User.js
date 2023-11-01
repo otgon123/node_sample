@@ -13,6 +13,8 @@ class User extends Model {
      */
     auth = (email, password) => {
         //email と passswordが一致したらユーザを返す
+        // TODO：データベースに接続してユーザ取得
+        // TODO：パスワードはハッシュ値でチェック
         return this.get().find((value) => 
             (value.email == email && value.password == password)
         );

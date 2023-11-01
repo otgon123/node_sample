@@ -18,7 +18,10 @@ exports.auth = (req, res) => {
     const authUser = user.auth(email, password)
 
     if (authUser) {
-        //認証ユーザがいれば、ユーザホームにリダイレクト
+        //認証ユーザがいれば、ユーザをセッションに保存
+        req.session.authUser = authUser
+        
+        //ユーザホームにリダイレクト
         res.redirect('/user')
     } else {
         //認証が失敗したら、ログインページにリダイレクト
