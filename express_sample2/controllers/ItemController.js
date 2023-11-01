@@ -1,12 +1,15 @@
-// models/item.js を読み込む
-const item = require('../models/item')
+// models/Item.js を読み込む
+const Item = require('../models/Item')
 
 /**
  * 商品一覧
  */
 exports.index = (req, res) => {
+    //Itemインスタンスを生成
+    const item = new Item()
     var data = {
         title: "商品一覧",
+        //商品をすべて取得
         items: item.get(),
     }
     // views/item/index.ejs にデータを渡して表示
